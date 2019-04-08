@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Bai7</title>
+</head>
+<body>
+<p>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+ Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</p>
+</body>
+<script >
+ let  arr1=[];
+ let i,j,V;
+ for (i=0;i<10;i++){
+     arr1[i]=parseInt(prompt("Nhap gia tri phan tu cho mang"));
+ }
+ console.log(arr1);
+V=parseInt(prompt("Nhap vao gia tri bat ky"));
+function relIndex() {
+  for (i=0;i<arr1.length;i++){
+      if(V==arr1[i]){
+        return i;
+      }
+  }
+}
+ function move(arr1) {
+    let index = relIndex();
+    for(j=index;j<arr1.length;j++){
+        arr1[j]=arr1[j+1];
+        }
+    arr1.length--;
+    return arr1;
+ }
+ console.log(move(arr1));
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Bai3</title>
+</head>
+<body>
+<p>Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+ Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</p>
+ <script >
+ let nums=[1,7,9,12,20,50,6,10,54,60];
+ let max;
+ let i;
+ let sum=0;
+ let tb;
+ for(i=0;i<nums.length;i++){
+     sum+=nums[i];
+     max=nums[0];
+     if(nums[i]>max){
+         max=nums[i];
+     }
+ }
+tb=sum/nums.length;
+document.write("mang:"+nums+" co phan tu lon nhat la "+ max+" o vi tri thu "+ i+"</br>");
+document.write("Trung binh cong cua mang la:"+tb);
+ </script>
+</body>
+</html>
